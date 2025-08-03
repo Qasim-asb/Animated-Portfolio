@@ -1,0 +1,117 @@
+nav {
+  background-color: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-s);
+}
+
+nav h1 {
+  font-size: var(--step-2);
+  background: var(--gradient-primary);
+  background-clip: text;
+  color: transparent;
+}
+
+nav ul {
+  font-size: var(--step--1);
+  display: flex;
+  gap: 1.5em;
+}
+
+.hamburger {
+  height: 2rem;
+  width: 2rem;
+  display: none;
+  z-index: 999;
+}
+
+.ham {
+  width: 100%;
+  height: 0.15rem;
+  border-radius: 10px;
+  background-color: var(--primary-light);
+  transition: var(--transition-long);
+}
+
+.activeham .ham:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+}
+
+.activeham .ham:nth-child(2) {
+  transform: scale(0);
+}
+
+.activeham .ham:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 0% 100%;
+}
+
+nav ul a {
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-short);
+}
+
+nav ul a:hover {
+  color: var(--primary);
+}
+
+nav ul a::after {
+  content: '';
+  height: 0.125rem;
+  width: 0;
+  left: 0;
+  bottom: -0.3rem;
+  background-color: var(--primary-light);
+  position: absolute;
+  transition: var(--transition-short);
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--primary);
+}
+
+.active::after {
+  width: 100%;
+}
+
+@media (width <= 62rem) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    transform: translateX(100%);
+    background-color: var(--bg-dark);
+    opacity: 0.8;
+    transition: var(--transition-long);
+  }
+
+  .menu {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+}

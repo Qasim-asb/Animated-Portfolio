@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --step--2: clamp(0.7901rem, 0.7866rem + 0.0157vw, 0.8rem);
+  --step--1: clamp(0.8889rem, 0.8491rem + 0.1767vw, 1rem);
+  --step-0: clamp(1rem, 0.9105rem + 0.3976vw, 1.25rem);
+  --step-1: clamp(1.125rem, 0.9684rem + 0.6958vw, 1.5625rem);
+  --step-2: clamp(1.2656rem, 1.0196rem + 1.0934vw, 1.9531rem);
+  --step-3: clamp(1.4238rem, 1.0597rem + 1.6184vw, 2.4414rem);
+  /* --step-4: clamp(1.6018rem, 1.0829rem + 2.3061vw, 3.0518rem); */
+  /* --step-5: clamp(1.802rem, 1.0818rem + 3.2011vw, 3.8147rem); */
+
+  /* --space-3xs: clamp(0.25rem, 0.2276rem + 0.0994vw, 0.3125rem); */
+  --space-2xs: clamp(0.5rem, 0.4553rem + 0.1988vw, 0.625rem);
+  /* --space-xs: clamp(0.75rem, 0.6829rem + 0.2982vw, 0.9375rem); */
+  --space-s: clamp(1rem, 0.9105rem + 0.3976vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.3658rem + 0.5964vw, 1.875rem);
+  --space-l: clamp(2rem, 1.8211rem + 0.7952vw, 2.5rem);
+  /* --space-xl: clamp(3rem, 2.7316rem + 1.1928vw, 3.75rem); */
+  /* --space-2xl: clamp(4rem, 3.6421rem + 1.5905vw, 5rem); */
+  /* --space-3xl: clamp(6rem, 5.4632rem + 2.3857vw, 7.5rem); */
+
+  --primary: #42b4cd;
+  --primary-light: #f0f8ff;
+  --secondary: #cd429f;
+  --bg-light: #10272c;
+  --bg-dark: #111417;
+  --gradient-primary: linear-gradient(to right, var(--primary), var(--primary-light));
+  --gradient-secondary: linear-gradient(to right, var(--secondary), var(--primary-light));
+  --transition-short: all 0.2s ease-in-out;
+  --transition-long: all 0.5s ease-in-out;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--primary-light);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: min(90%, 80rem);
+  margin-inline: auto;
+}
+
+button {
+  font-size: var(--step-0);
+  padding: 0.5em 1.2em;
+  background-color: var(--primary);
+  color: var(--primary-light);
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition-short);
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--primary);
+}

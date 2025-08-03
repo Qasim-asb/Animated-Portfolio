@@ -1,0 +1,50 @@
+#home {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding-block: 2rem;
+  row-gap: var(--space-l);
+}
+
+#home>* {
+  flex: 1 1 27.915rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeimage img {
+  width: 70%;
+  filter: drop-shadow(2px 2px 20px var(--primary));
+}
+
+.homedetails {
+  font-size: var(--step--2);
+}
+
+.line1 {
+  font-size: 0.8em;
+}
+
+.line2 {
+  font-size: 2.5em;
+  background: var(--gradient-primary);
+  background-clip: text;
+  color: transparent;
+  margin-top: 0.3em;
+}
+
+.line3 {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.homedetails button {
+  margin-top: 1.4em;
+}
+
+@media (width > 62rem) and (width <=64rem) {
+  #home {
+    min-height: 70vh;
+  }
+}
